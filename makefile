@@ -5,10 +5,10 @@ FLAGS= -Wall -c -g
 move: $(OBJS)
 	$(CC) -o move $(OBJS) 
 
-mover.o: mover.cpp
-		$(CC) $(FLAGS) mover.cpp
+Mover.o: Mover.cpp
+		$(CC) $(FLAGS) Mover.cpp
 
-moverImp.o: moverImp.cpp mover.hpp
+MoverImp.o: MoverImp.cpp Mover.hpp
 		$(CC) $(FLAGS) CardImp.cpp
 clean:
 	rm -r *.o move

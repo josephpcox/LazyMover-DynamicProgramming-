@@ -3,7 +3,6 @@
 @Def: Project Imp file
 *******************************************/
 #include "Mover.hpp"
-#include <iostream>
 
 using namespace std;
 /*contructor to build the mover class object

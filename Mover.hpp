@@ -5,6 +5,7 @@
 #include <vector>
 #include <stack>
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -21,7 +22,9 @@ struct Mover{
     Mover (int size);
 
     //Destructor
-    ~Mover();
+    ~Mover(){
+        cout<<"Killed mover instance"<<endl;
+    };
 
     //Getters/Setters for maxCount
     int getMaxCount()const;

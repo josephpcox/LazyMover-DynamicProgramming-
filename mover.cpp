@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
     myMover = Mover();
     currentCount = 0;
     maxCount = 0;
-
+    myMover.boxList.push_back()
     for(i = 0; i < myMover.boxList.size(); i++)
     {
         if(myMover.boxList[i] > myMover.currentBox.top() && MatrixRow >= myMover.boxList[i]){

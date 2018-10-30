@@ -8,7 +8,7 @@ move: $(OBJS)
 mover.o: mover.cpp
 		$(CC) $(FLAGS) mover.cpp
 
-moverImp.o: moverImp.cpp mover.h
+moverImp.o: moverImp.cpp mover.hpp
 		$(CC) $(FLAGS) CardImp.cpp
 clean:
 	rm -r *.o move

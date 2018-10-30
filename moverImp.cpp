@@ -1,20 +1,32 @@
 /****************************************
 @Author: Joseph Cox U00594912
-
-
 @Def: Project Imp file
 *******************************************/
-# include "mover.h"
-using namespace std;
+#include "Mover.hpp"
+#include <iostream>
 
-Mover::Mover (fstream& infile);
+using namespace std;
+/*contructor to build the mover class object
+ * Initialize the vector with the size and initilize the empty stack
+ */
+Mover::Mover (int size){
+  boxList.resize(size);
+}
 
 //Getters/Setters for maxCount
-Mover::int getMaxCount() const;
+int Mover::getMaxCount() const{
+    return this->maxCount;
+}
 
-Mover::void setMaxCount();
+void Mover:: setMaxCount(int newCount){
+    this->maxCount = newCount;
+}
 
 //Getters/Setters for currentCount
-Mover::int getCurrentCount() const;
+int Mover:: getCurrentCount() const{
+    return this->currentCount;
+}
 
-Mover::void setCurrentCount();
+void Mover::setCurrentCount(int newCount){
+    this->currentCount = newCount;
+}

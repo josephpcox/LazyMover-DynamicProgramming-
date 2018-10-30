@@ -9,6 +9,6 @@ Mover.o: Mover.cpp
 		$(CC) $(FLAGS) Mover.cpp
 
 MoverImp.o: MoverImp.cpp Mover.hpp
-		$(CC) $(FLAGS) CardImp.cpp
+		$(CC) $(FLAGS) MoverImp.cpp
 clean:
 	rm -r *.o move

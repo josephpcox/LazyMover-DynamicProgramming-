@@ -19,20 +19,19 @@ int main(int argc, char const *argv[])
     //     perror("Error while opening output.txt file for writing.\n");
 
     Mover myMover = Mover(5);
-    myMover.boxList.push_back()
-    for(i = 0; i < myMover.boxList.size(); i++)
+    for(int i = 0; i <= myMover.boxList.size(); i++)
     {
-        if(myMover.boxList[i] > myMover.currentBox.top() && MatrixRow >= myMover.boxList[i]){
+        if(myMover.boxList[i] > myMover.currentBox.top() && 1 >= myMover.boxList[i]){
             myMover.currentBox.pop();
-            currentCount -= 1;
-            myMover.currentBox.push(boxList[i]);
-            currentCount += 1;
+            myMover.currentCount -= 1;
+            myMover.currentBox.push(myMover.boxList[i]);
+            myMover.currentCount += 1;
         }
         else{
-            myMover.currentBox.push(boxList[i]);
-            currentCount += 1;
+            myMover.currentBox.push(myMover.boxList[i]);
+            myMover.currentCount += 1;
         }
-        maxCount = currentCount;
+        myMover.maxCount = myMover.currentCount;
     }
 
     //Closing files

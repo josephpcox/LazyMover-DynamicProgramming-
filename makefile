@@ -1,4 +1,4 @@
-OBJS= mover.o moverImp.o 
+OBJS= Mover.o MoverImp.o 
 CC=g++ -std=c++14
 FLAGS= -Wall -c -g
 

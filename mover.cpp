@@ -18,9 +18,7 @@ int main(int argc, char const *argv[])
     // if(!writeTo.is_open())
     //     perror("Error while opening output.txt file for writing.\n");
 
-    myMover = Mover();
-    currentCount = 0;
-    maxCount = 0;
+    Mover myMover = Mover(5);
     myMover.boxList.push_back()
     for(i = 0; i < myMover.boxList.size(); i++)
     {

@@ -5,15 +5,7 @@
 #include <sstream> 
 using namespace std;
 
-/*struct Move{
-    vector <int> dolly;
-    
-    // Constructor
-    Mover(){
-        
-    }
-};
-*/
+
 
 int main (){
     // make sure that the files can be read and instreamed 
@@ -33,15 +25,16 @@ int main (){
     // read in the stream until the EOF
     stringstream ss;
     string line;
-    bool firstTime = true;
-    int numObjects=0;
+    bool firstTime=true;
+    int numProblems=0;
+    vector<int> > problemSet();
     while (input_file) {
         // we need to know how many objects need to be created 
         if(firstTime == true){
             getline(input_file,line);
             ss << line;
-            ss >> numObjects;
-            cout<<"This is the number of objects that need to be created for this file "<<numObjects<<endl;
+            ss >> numProblems;
+            cout<<"This is the number of objects that need to be created for this file "<<numProblems<<endl;
             firstTime = false;
         }
         // Read a Line from File 

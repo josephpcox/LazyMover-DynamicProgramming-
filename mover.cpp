@@ -1,6 +1,6 @@
 /*
  * @Def: Driver class for the algorithms project
- * @Author: Joseph Cox U00594912
+ * @Author: Joseph Cox U00594912 Ricardo Montanez
  * Date: 10/30/18
  */
 

@@ -17,14 +17,14 @@ using namespace std;
 int main() {
 
 	// initalize the starting variables...
-	//stringstream strstr; //Attempting string stream
-	int comp2;
+	stringstream ss;
+	int comp;
 
 	string line;
 	bool firstTime = true;
 	int numObjects = 0;
 	int size = 0;
-	char comp;
+	
 	// DO NOT TOUCH With out talking to Joseph
 	// make sure that the files can be read and instreamed 
 	/***************************************************************************/
@@ -49,7 +49,10 @@ int main() {
 		if (firstTime == true)
 		{
 			getline(input_file, line);
-			numObjects = stoi(line);
+			istringstream ss(line);
+			//ss << line;
+			ss >> numObjects;
+			
 			cout << "This is the number of objects that need to be created for this file " << numObjects << endl;
 			firstTime = false;
 		}
@@ -63,34 +66,23 @@ int main() {
 			// the lines always go in pairs from here on out, the first line is going to be the size of the vector that we need
 			// the next line is going to be the list that needs to be put in the vector use getline to retrieve the line
 			getline(input_file, line);
-
-			size = stoi(line);
+			istringstream ss2(line);
+			//ss << line;
+			ss2 >> size;
 			cout << "The size that will be allocated for this vector is... " << size << endl;
 			vector<int> v(size);
 			/*now we call getline function again and iterate through the charaters of the array converting
 			* each charater into an int
 			*/
 			getline(input_file, line);
+			istringstream ss3(line);
+			// ss << line; 
 
-			istringstream strstr(line); //sstream attempt
-			while (strstr >> comp2) { //enters string stream into int var
-				cout << (comp2) << endl;
-				//v.push_back(comp2);
+			while (ss3 >> comp) { //enters string stream into int var
+				cout << (comp) << endl;
+				v.push_back(comp);
 			}//Should work in place of below code
-
-			for (unsigned int i = 0; i<line.length(); i++)
-			{
-				comp = line.at(i);
-				if (isspace(comp))
-				{
-					continue;
-				}
-				else
-				{
-					cout << (comp) << endl;
-					//v.push_back(stoi(comp);
-				}
-			}
+			
 			problemSet.push_back(v); // put v into the problem set
 			v.clear(); // destroy the vector and free the memory for the next iteration to use the same variables 
 		}

@@ -62,6 +62,7 @@ int main(int argc, char const *argv[]) {
         ss.clear();
         myBoxList[i]=num;
       }
+      cout<<"answer is: "<<findGreatestHelper(myBoxList,myBoxList.size())<<"\n"<<endl;
       cout<<"myBoxSize is:"<<myBoxList.size()<<endl;
       for(int i =0;i<myBoxList.size();i++)
       {

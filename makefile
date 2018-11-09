@@ -1,14 +1,15 @@
-OBJS= Mover.o MoverImp.o 
+OBJS=moveImp.o 
 CC=g++ -std=c++14
 FLAGS= -Wall -c -g
 
-move: $(OBJS)
+help: $(OBJS)
 	$(CC) -o move $(OBJS) 
 
-Mover.o: Mover.cpp
-		$(CC) $(FLAGS) Mover.cpp
+moveImp.o: moveImp.cpp move.hpp
+		$(CC) $(FLAGS) moveImp.cpp
 
-MoverImp.o: MoverImp.cpp Mover.hpp
-		$(CC) $(FLAGS) MoverImp.cpp
 clean:
-	rm -r *.o move
+	rm -r *.o help
+
+it:
+	./move

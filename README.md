@@ -1,6 +1,6 @@
 # Project 2: Dynamic programming: The Lazy Mover 
 ## Group 3: Joseph Cox, Adrian Borrego, and Ricardo Montanez
-## NOvember 9, 2018
+## November 9, 2018
 
 ---
 

@@ -93,11 +93,11 @@ int findGreatest(vector<int>& boxList, int size, vector<int>& myBoxes, int index
   }
 
   else{                                                                                                                    // If non of the above cases are true, perform the naive alogirthm to find the greatest number of boxes possible.
-    topBox = boxList[currentIndex];
-	for(int i = currentIndex; i < size; i++){
-      if(topbox >= boxList[i + 1]){
+    int topBox = boxList[currentIndex];
+	  for(int i = currentIndex; i < size; i++){
+      if(topBox >= boxList[i + 1]){
         count = count + 1;
-		topBox = boxList[i + 1];
+		    topBox = boxList[i + 1];
       }
     }
     myBoxes[currentIndex] = count + 1;

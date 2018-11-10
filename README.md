@@ -35,7 +35,7 @@ This make file has 5 functions that can be exucted in the following way:
 
 
 
-# <br/><br/><br/><br/>Report Problems  
+#Report Problems  
 
 ## Problem 1 
 A single problem instance of the lazy mover problem must look at the boxes in front of it to see what can be picked up. If the lazy mover chooses box number n<sub>i</sub>. The lazy mover should be able to look at the options of boxes in front of it choose the best box. To do this we must already know what boxes can be picked up starting at n<sub>i+1</sub> and n<sub>i+2</sub>... n<sub>n</sub>.In short if we can figure out what boxes can be picked up starting at a box in front of n then we know what boxes can be picked up at n. This means all of the sub problems occur in front of n at n<sub>n</sub> which is at the back of the list
@@ -60,7 +60,7 @@ def healper(boxList,size,index):
     myBoxes.build(size, -1)
     return findGreatest(boxList, size, myBoxes, i)
 ```
-<br/><br/><br/><br/><br/>
+
 ```python
 def RecursiveFunction(boxList,size,index):
     #Recursive Function:
@@ -110,7 +110,7 @@ def RecursiveFunction(boxList,size,index):
 ## Problem 5
 Since the memoized function uses a vector to store sub-results of recursive calls on index i and iterates through the vector to find the greatest number after nth recursive calls. The memorized function has a worst-case complexity of O(n2).
 
-<br/><br/>
+
 ## Problem 6
 ```python
 def NaïveIterativeAlgorithm():
@@ -143,7 +143,7 @@ def Helper(boxList,size):
     return findGreatest(boxList, size, myBoxes, index=0)
 
 ```
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 
 
 ```python
@@ -188,7 +188,7 @@ def RecursiveFunction(boxList,size,myBoxes,index):
     return function call to mostBoxes() to return answer.
 
 ```
-<br/><br/><br/><br/><br/><br/>
+
 ## Problem 9
 ```python
 def boxOrder(boxList,size,myBoxes,index)
